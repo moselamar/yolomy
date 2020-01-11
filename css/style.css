@@ -1,0 +1,486 @@
+/* Import FontAwesome for the checkmark icon */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.container
+{
+    max-width: 1200px;
+}
+
+#home
+{
+    background: url("../assets/backgrounds/hero.jpg") center center/cover no-repeat;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr
+}
+#main-nav
+{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center
+}
+
+#main-nav.scrolled
+{
+    background: #C6BFA5
+}
+
+.menu 
+{
+    justify-self: end;   
+}
+.menu ul
+{
+    display: flex;
+    list-style: none
+}
+.menu ul li
+{
+    margin-left: 2rem
+}
+.menu ul li a
+{
+    padding: 0.75rem
+}
+
+.logo
+{
+    width: 180px;
+    margin-left: 2rem;
+}
+
+a
+{
+    color: white;
+    text-decoration: none
+}
+
+/* showcase */
+#showcase
+{
+    height: 70vh;
+    display: grid;
+    color: white;
+
+    margin-top: 12rem;
+
+    grid-template-rows:repeat(3,1fr) 
+}
+#showcase .heading
+{
+    align-self: flex-end;
+    justify-self: center;
+    font-size: 5rem;
+}
+
+#showcase .slogan
+{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.75rem;
+}
+#showcase a
+{
+    align-self: end;
+    justify-self: center;
+    cursor: pointer
+}
+
+/* selection section */
+#selection
+{
+    height: 15vh;
+    background: #C6BFA5;
+}
+#selection  .container
+{
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+
+    margin: 0 auto
+}
+.see-all-div
+{
+    text-align: end
+}
+#see-all
+{
+    border: none;
+    padding: 0.5rem 0.75rem;
+    background: #661A00;
+    color: white;
+
+}
+#see-all:hover
+{
+    cursor: pointer;
+}
+
+.pd-checkbox
+{
+    display: inline;
+}
+
+/* styling the checkboxes
+/* hide the regular checkbox */
+.pd-checkbox input {
+    opacity: 0;
+    position: absolute;   
+}
+/* position the label */
+.pd-checkbox input, .p-checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pd-checkbox label {
+    position: relative;
+}
+/* style the unchecked checkbox */
+.pd-checkbox input + label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #CCCCCC;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height:15px;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    font-size:15px;
+    line-height:18px;
+}
+/* style the checked checkbox */
+.pd-checkbox input:checked + label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    background: #FFFFFF;
+    color: #A99B78;
+    border-color:#AC9F7B;
+}
+
+/* product section */
+#products
+{
+    width: 100%;
+    
+    margin: 0 auto;
+}
+
+/* men section */
+.wrapper 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.line
+{
+    height: 2px;
+    width: 100%;
+    margin-left: 3rem;
+    background: #CBCBCB;
+}
+
+#men
+{
+    margin-top: 4rem;
+}
+
+.next-scroll
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #AC9E7C
+}
+
+.products-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+/*card*/
+.item
+{
+    width: 300px;
+    height: 400px;
+    background: #f5f5f7;
+    justify-self: center;
+    border: 2px white solid;
+
+    display: grid;
+    grid-template-rows: 10% 70% 20%
+}
+.item:hover
+{
+    border: 2px #a99b76 solid;
+    cursor: pointer;
+}
+.item img
+{
+    align-self: center;
+    justify-self: center;
+    height: 70%;
+}
+.item-name
+{
+    color: #C7BFAA
+}
+
+.top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.choices p
+{
+    display: inline-block
+}
+
+.bottom 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+/*women section */
+#women .wrapper
+{
+    margin: 4rem 0 2rem 0;
+}
+
+#women .next-scroll
+{
+    align-items: flex-start;
+}
+
+/* choice color */
+.choice
+{
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+}
+
+.green
+{
+    background: green;
+}
+.grey
+{
+    background: #535154;
+}
+.blue
+{
+    background: blue;
+}
+.white
+{
+    background: white
+}
+.pink
+{
+    background: #D4A7AC
+}
+
+/*about us */
+#about-us
+{
+    height: 40vh;
+    background: url("../assets/backgrounds/about.jpg") center/cover no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.about-us-text
+{
+    max-width: 60%;
+    color: white;
+    text-align: center;
+
+    border-left: 2px solid #908361;
+    border-right: 2px solid #908361;
+    border-bottom: 2px solid #908361;
+    
+}
+
+/* add border to about us container*/
+    .about-us-text h1{
+        display: flex;
+        flex-direction: row;
+        margin-top: -13px
+    }
+    .about-us-text h1:before, .about-us-text h1:after{
+        content: "";
+        flex: 1 1;
+        border-bottom: 2px solid #908361;
+        margin: auto;
+      }
+
+      .about-us-text p
+      {
+          font-size: 2rem;
+          padding: 50px
+      }
+
+/* promo-code */
+#promo-code
+{
+    height: 10vh;
+    background: #535154;
+    color: white;
+
+    display: flex;
+    align-items: center
+}
+
+#promo-code img{
+    height: 25px;
+    margin: 0 2rem
+}
+
+/* main footer */
+#main-footer
+{
+    
+    background: #414141;
+    padding-bottom: 2rem
+    
+
+}
+
+.main-footer-text
+{
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 20% 25%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10%;
+
+    padding: 4rem;
+}
+
+
+.social-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr );
+
+    grid-gap: 1rem;
+    justify-content: center
+}
+.social-links
+{
+    text-align: center
+}
+
+.copyr
+{
+    text-align: center;
+    color: white;
+}
+
+
+/* screen responsiveness */
+@media (max-width: 768px)
+{
+    #main-nav
+    {
+        display: inline;
+
+    }
+    .logo
+    {
+        display: block;
+        margin: 0 auto
+    }
+    .menu
+    {
+        padding-top: 0.5rem;
+    }
+    .menu ul
+    {
+        justify-content: center
+    }
+    #showcase .heading
+    {
+        font-size: 2rem;
+        text-align: center
+    }
+    #showcase .slogan
+    {
+        font-size: 1rem;
+    }
+    #selection  .container
+    {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+
+        align-items: center;
+        justify-content: center
+    }
+    .see-all-div
+    {
+      text-align: center
+    }
+    .about-us-text
+    {
+        max-width: 100%;
+    }
+
+    .about-us-text p
+        {
+            font-size: 1rem;
+            padding: 5px
+        }
+    #promo-code p 
+    {
+        font-size: 0.75rem;
+    }
+
+    #promo-code img{
+        height: 20px;
+        margin: 0 1rem
+    }
+
+    .main-footer-text
+    {
+        grid-template-columns:none;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 0;
+
+        padding: 1rem;
+        align-items: center
+    }
+    
+}
